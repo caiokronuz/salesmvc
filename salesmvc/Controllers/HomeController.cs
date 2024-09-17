@@ -15,6 +15,7 @@ namespace salesmvc.Controllers
 
         public IActionResult Index()
         {
+            ViewData["Message"] = "Hello World! Deus seja Louvado, ALELUIA";
             return View();
         }
 

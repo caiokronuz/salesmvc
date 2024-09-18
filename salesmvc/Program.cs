@@ -6,7 +6,7 @@ builder.Services.AddDbContext<salesmvcContext>(options =>
     options.UseMySql(
         builder.Configuration.GetConnectionString("salesmvcContext"),
         new MySqlServerVersion(new Version(8, 0, 25)), // Ajuste a versão conforme necessário
-        p => p.MigrationsAssembly("salesmvc") // Verifique o nome correto da sua assembly
+        p => p.MigrationsAssembly("salesmvc")
     )
 );
 

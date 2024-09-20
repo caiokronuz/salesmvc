@@ -1,6 +1,8 @@
 ﻿using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.DependencyInjection;
 using salesmvc.Data;
+using salesmvc.Models.Services;
+
 var builder = WebApplication.CreateBuilder(args);
 builder.Services.AddDbContext<salesmvcContext>(options =>
     options.UseMySql(
@@ -12,6 +14,8 @@ builder.Services.AddDbContext<salesmvcContext>(options =>
 
 //register SeedingService for dependency injection system.
 builder.Services.AddScoped<SeedingService>();
+//register SellerService for dependency injection system.
+builder.Services.AddScoped<SellerService>();
 
 // Add services to the container.
 builder.Services.AddControllersWithViews();

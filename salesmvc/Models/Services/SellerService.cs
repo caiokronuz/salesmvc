@@ -17,9 +17,7 @@ namespace salesmvc.Models.Services
         }
 
         public void Insert(Seller obj)
-        {
-            
-            obj.Department = _context.Department.First(); //Declarando departament default para teste
+        { 
             _context.Add(obj);
             _context.SaveChanges();
         }

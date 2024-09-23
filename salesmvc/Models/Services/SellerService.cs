@@ -15,5 +15,13 @@ namespace salesmvc.Models.Services
         {
             return _context.Seller.ToList();
         }
+
+        public void Insert(Seller obj)
+        {
+            
+            obj.Department = _context.Department.First(); //Declarando departament default para teste
+            _context.Add(obj);
+            _context.SaveChanges();
+        }
     }
 }

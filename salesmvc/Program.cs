@@ -20,6 +20,8 @@ builder.Services.AddScoped<SeedingService>();
 builder.Services.AddScoped<SellerService>();
 //register DepartmentService for dependency injection system.
 builder.Services.AddScoped<DepartmentService>();
+//register SalesRecordService for dependency injection system.
+builder.Services.AddScoped<SalesRecordService>();
 
 // Add services to the container.
 builder.Services.AddControllersWithViews();
